@@ -8,7 +8,9 @@ router.register('Users', views.UsersViewSet)
 urlpatterns = [
     
     
-    path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('x', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
+    path('', views.index,name="Index"),
+    path('checkotp', views.checkOTP,name="checkOTP"),
 ]

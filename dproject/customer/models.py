@@ -5,7 +5,7 @@ from django.db import models
 class Users(models.Model):
     cust_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
-    mobile_no = models.CharField(max_length=10)
+    mobile_no = models.CharField(max_length=12)
     address = models.CharField(max_length=100)
-    lat_long = models.CharField(max_length=30)
-    
+    la_long = models.CharField(max_length=30)
+    OTP=models.CharField(max_length=6)

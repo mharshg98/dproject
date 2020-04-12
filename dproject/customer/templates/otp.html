@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    login page
+    </head>
+
+    <body>
+        {{phone}}
+        <form action="checkotp" method="POST">
+            {% csrf_token %}
+            <input name="otp" id="otp"/>
+            <input type="hidden" name="phonehidden" value="{{phone}}"/>
+            <button type="submit">Verify</button>
+        </form>
+
+
+
+        <body>
+    </html>
